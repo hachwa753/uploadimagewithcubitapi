@@ -16,6 +16,10 @@ class DioClient {
     _dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (RequestOptions options, RequestInterceptorHandler handler) {
+          print('hello bro (onRequest)');
+          //global header
+          options.headers.addAll({'Accept': 'application/json'});
+
           print('Request: ${options.method} ${options.uri}');
           return handler.next(options);
         },
