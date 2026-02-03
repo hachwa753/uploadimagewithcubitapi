@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
                 PickerDatasource(ImagePicker()),
                 CloudinaryDatasource(
                   dioSource: DioSource(DioClient()),
-                  cloudName: "dx0l16aut",
+                  cloudName: "",
                   uploadPreset: "img_upload",
                 ),
               ),
